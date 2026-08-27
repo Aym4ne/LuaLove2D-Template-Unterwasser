@@ -1,30 +1,8 @@
-# Projekt: 2D-Landschaft mit Löve2D
-
-## 1. Übersicht
-Ein zweidimensionales Grafikprojekt in Lua und Löve2D. Ziel ist es, grundlegende Zeichenfunktionen zu verstehen und eine statische Landschaftsszene aus geometrischen Formen aufzubauen.
-
-## 2. Tech-Stack
-* **Sprache:** Lua
-* **Framework:** Löve2D
-* **Entwicklungsumgebung:** IntelliJ IDEA
-* **Versionskontrolle:** Git & GitHub
-
-## 3. Dateistruktur
-.
-├── main.lua          -- Haupteinstiegspunkt (love.draw)
-├── project.md        -- Projektbeschreibung und Fortschritt
-└── README.md         -- Wie man ein Lua/Löve2D-Projekt in IntelliJ ans Laufen bekommt
-
-## 4. Anforderungen (Feature)
-
-
-# Projektname
-
 <!--
   Kurzer, aussagekräftiger Titel des Projekts.
   Beispiel für dieses Projekt:
 -->
-Löve2D Landschaft
+# Projektname: 2D-Landschaft mit Löve2D
 
 ## 1. Beschreibung
 
@@ -51,15 +29,10 @@ gezeichnet mit den grundlegenden Löve2D-Zeichenfunktionen (`love.graphics`).
   Schritt-für-Schritt-Anleitung, wie man das Projekt startet.
   So konkret wie möglich, damit auch jemand ohne Vorwissen es schafft.
 -->
-1. Repository klonen:
-   ```bash
-   git clone <repository-url>
-   ```
-2. Projektordner mit LÖVE ausführen:
-   ```bash
-   love .
-   ```
-   (Alternativ: Projektordner auf die `love.exe`/App ziehen)
+* 1. Install EmmyLua-Plugin and Restart IDE (ignore incompatible-Error-Message).
+* 2. Clone this repository or fork it: https://github.com/JAmbrosius/LuaLove2D-Template/
+* 3. Run projekt: near the play-button should be "Run Love".
+* 4. Start coding your own Love2d-Project!
 
 ## 4. Projektstruktur
 
