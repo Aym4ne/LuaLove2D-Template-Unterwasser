@@ -1,30 +1,69 @@
--- <- So wird eine Zeile auskommentiert (d.h. der Code/Text danach wird bei "Run" ignoriert.)
---[[ Will man über mehrere Zeilen auskommentieren, so verwendet man
-     zusätzlich eckige Klammern.
-]]--
 
--- Dies ist eine Methode, die dauerhaft aufgerufen wird - ca. 60 mal pro Sekunde.
 function love.draw()
-    love.graphics.setBackgroundColor(199/255,21/255,133/255)              --Farbewerte sind Anteile von 255. Entspricht also rgb(100,0,0)
-    love.graphics.setColor(1,0,1)
-    love.graphics.rectangle("fill",200,400,150,25)    --Ein Rechteck, dessen linke obere Ecke bei den Koordinaten (400|100) ist. Es ist 75x25 Pixel groß.
-    love.graphics.setColor(0,1,0)
-    love.graphics.circle("line",200,400,50)                     --Ein Kreis, dessen Mittelpunkt bei den Koordinaten (0|0) ist. Er hat einen Radius von 50Pixel
+    love.graphics.clear(0.1, 0.4, 0.8)
 
-    -- Raster zur Orientierung nach einer Idee von Viktor Kulik
-    love.graphics.setColor(1,1,1,0.5)
-    love.graphics.line(0,100,1000,100)
-    love.graphics.line(0,200,1000,200)
-    love.graphics.line(0,300,1000,300)
-    love.graphics.line(0,400,1000,400)
-    love.graphics.line(0,500,1000,500)
+    zeichneMeeresboden()
+    --Koordinaten des Seegrases
+    zeichneSeegras(100, 420)
+    zeichneSeegras(650, 420)
+    --Koordinaten der Fische
+    zeichneFisch(200, 200)
+    zeichneFisch(400, 300)
+    zeichneFisch(300, 150)
+    zeichneFisch(550, 250)
 
-    love.graphics.line(100,0,100,800)
-    love.graphics.line(200,0,200,800)
-    love.graphics.line(300,0,300,800)
-    love.graphics.line(400,0,400,800)
-    love.graphics.line(500,0,500,800)
-    love.graphics.line(600,0,600,800)
-    love.graphics.line(700,0,700,800)
 
+
+
+
+end
+
+
+
+function zeichneMeeresboden()
+    --Sand-Boden
+    love.graphics.setColor(0.76, 0.70, 0.50)
+    love.graphics.rectangle("fill", 0, 500, 800, 100)
+    --Schwarze Umrandung
+    love.graphics.setColor(0,0,0)
+    love.graphics.rectangle("line", 0, 500, 800, 100)
+
+    --Farbe Zurücksetzen
+    love.graphics.setColor(1,1,1)
+end
+
+
+function zeichneFisch(x, y)
+    --Fisch Körper
+    love.graphics.setColor(1, 0.5, 0)
+    love.graphics.ellipse("fill", x, y, 30, 15)
+    --Fisch Schwanz
+    love.graphics.polygon("fill", x + 30, y, x + 45, y - 10, x + 45, y + 10)
+
+    --Augen Schwarz
+    love.graphics.setColor(0, 0, 0)
+    love.graphics.circle("fill", x - 15, y - 3, 3)
+
+    --Schwarze Umrandung
+    love.graphics.setColor(0,0,0)
+    love.graphics.ellipse("line", x, y, 30, 15)
+
+    love.graphics.polygon("line", x + 30, y, x + 45, y - 10, x + 45, y + 10)
+
+    --Farbe Zurücksetzen
+    love.graphics.setColor(1,1,1)
+end
+
+
+function zeichneSeegras(x, y)
+    --Seegras
+    love.graphics.setColor(0.1, 0.7, 0.2)
+    love.graphics.rectangle("fill", x, y, 10, 80)
+    love.graphics.rectangle("fill", x + 15, y - 20, 10, 100)
+    --Schwarze Umrandung
+    love.graphics.setColor(0,0,0)
+    love.graphics.rectangle("line", x, y, 10, 80)
+    love.graphics.rectangle("line", x + 15, y - 20, 10, 100)
+
+    love.graphics.setColor(1,1,1)
 end
