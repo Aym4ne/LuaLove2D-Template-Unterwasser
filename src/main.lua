@@ -1,4 +1,3 @@
-
 function love.draw()
     love.graphics.clear(0.1, 0.4, 0.8)
 
@@ -6,17 +5,40 @@ function love.draw()
     --Koordinaten des Seegrases
     zeichneSeegras(100, 420)
     zeichneSeegras(650, 420)
+
+    --Luftblasen beim linken Seegras
+    love.graphics.setColor(1, 1, 1, 0.7) 
+    love.graphics.circle("fill", 110, 350, 5)
+    love.graphics.circle("fill", 125, 280, 8)
+    love.graphics.circle("fill", 105, 180, 4)
+    love.graphics.circle("fill", 120, 100, 7)
+
+    love.graphics.setColor(0, 0, 0)      -- Schwarze Umrandung
+    love.graphics.circle("line", 110, 350, 5)
+    love.graphics.circle("line", 125, 280, 8)
+    love.graphics.circle("line", 105, 180, 4)
+    love.graphics.circle("line", 120, 100, 7)
+
+    --Luftblasen beim rechten Seegras
+    love.graphics.setColor(1, 1, 1, 0.7)
+    love.graphics.circle("fill", 660, 330, 7)
+    love.graphics.circle("fill", 675, 240, 5)
+    love.graphics.circle("fill", 655, 150, 9)
+
+    love.graphics.setColor(0, 0, 0)      -- Schwarze Umrandung
+    love.graphics.circle("line", 660, 330, 7)
+    love.graphics.circle("line", 675, 240, 5)
+    love.graphics.circle("line", 655, 150, 9)
+
+    love.graphics.setColor(1, 1, 1)      -- Farbe zurücksetzen
+
     --Koordinaten der Fische
     zeichneFisch(200, 200)
     zeichneFisch(400, 300)
     zeichneFisch(300, 150)
     zeichneFisch(550, 250)
-
-
-
-
-
 end
+
 
 
 

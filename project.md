@@ -2,7 +2,7 @@
   Kurzer, aussagekräftiger Titel des Projekts.
   Beispiel für dieses Projekt:
 -->
-# Projektname: 2D-Landschaft mit Löve2D
+# Projektname: Wasserdruck-Landschaft
 
 ## 1. Beschreibung
 
@@ -10,9 +10,10 @@
   Was macht das Projekt? 2-4 Sätze reichen.
   Kein Roman - wer mehr wissen will, liest den Code.
 -->
-Ein kleines Löve2D-Programm, das eine einfache 2D-Landschaftsszene zeichnet.
-Die Szene enthält mindestens eine Sonne, ein Haus mit Spitzdach und einen Baum,
-gezeichnet mit den grundlegenden Löve2D-Zeichenfunktionen (`love.graphics`).
+Ein kleines Löve2D-Programm, das eine einfache 2D-Unterwasserszene zeichnet.
+In der Szene ist ein Meeresboden zu sehen sowie das Wasser. Die Bewohner des Meeres
+sind mit der farbe orange einfach zu erkennen. 2 grüne Algen dürfen auch nicht fehlen.
+Die runden Luftblasen zeigen dass es Unterwasser leben gibt.(`love.graphics`).
 
 ## 2. Tech-Stack
 <!--
@@ -53,12 +54,12 @@ gezeichnet mit den grundlegenden Löve2D-Zeichenfunktionen (`love.graphics`).
   Die ersten drei Punkte sind die Mindestanforderungen an dieses Projekt -
   ohne die gilt die Abgabe nicht als vollständig.
 -->
-- [ ] Sonne zeichnen
-- [ ] Haus mit Spitzdach zeichnen
-- [ ] Baum zeichnen
-- [ ] Fenstergröße/-titel in `conf.lua` sinnvoll einstellen
-- [ ] Code kommentiert und aufgeräumt
-- [ ] project.md vervollständigt
+- [x] Fische (gleich aussehend)
+- [x] Wasser
+- [x] Algen
+- [x] Blasen
+- [x] Meeresboden
+
 
 ## 6. Autor:innen
 
@@ -66,8 +67,7 @@ gezeichnet mit den grundlegenden Löve2D-Zeichenfunktionen (`love.graphics`).
   Namen der Gruppenmitglieder. Bei Gruppenarbeit reicht es meist aus,
   keine einzelnen Aufgaben aufzuschlüsseln - das gehört eher ins Commit-Log.
 -->
-- Vorname Nachname
-- Vorname Nachname
+Aymane Taarabt
 
 ## 7. Status
 
@@ -75,4 +75,4 @@ gezeichnet mit den grundlegenden Löve2D-Zeichenfunktionen (`love.graphics`).
   Ein Wort/Satz reicht: in Bearbeitung, fertig, abgegeben.
   Praktisch für die Lehrkraft beim Durchsehen mehrerer Repos.
 -->
-in Bearbeitung
+Fertig gestellt! :)
