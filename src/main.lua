@@ -7,7 +7,7 @@ function love.draw()
     zeichneSeegras(650, 420)
 
     --Luftblasen beim linken Seegras
-    love.graphics.setColor(1, 1, 1, 0.7) 
+    love.graphics.setColor(1, 1, 1, 0.7)
     love.graphics.circle("fill", 110, 350, 5)
     love.graphics.circle("fill", 125, 280, 8)
     love.graphics.circle("fill", 105, 180, 4)
