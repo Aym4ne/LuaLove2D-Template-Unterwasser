@@ -1,3 +1,25 @@
+-- 1. Variablen für die Bild-Bewegung (Ganz oben definieren!)
+local bild
+local bildX = 0  -- Start ganz links
+local bildY = 500  -- Start unten auf dem Sandboden
+
+function love.load()
+    -- Lädt dein Bild (Stelle sicher, dass "mein_bild.png" im selben Ordner liegt!)
+    bild = love.graphics.newImage("Spongebob-removebg-preview.png")
+end
+
+function love.update(dt)
+    -- 2. Bewegung berechnen (dt sorgt dafür, dass es flüssig läuft)
+    bildX = bildX + 100 * dt  -- Wandert nach rechts
+    bildY = bildY - 70 * dt   -- Wandert nach oben
+
+    -- Optional: Wenn das Bild rechts oben verschwindet, startet es von vorne
+    if bildX > 800 then
+        bildX = 0
+        bildY = 500
+    end
+end
+
 function love.draw()
     love.graphics.clear(0.1, 0.4, 0.8)
 
@@ -37,9 +59,11 @@ function love.draw()
     zeichneFisch(400, 300)
     zeichneFisch(300, 150)
     zeichneFisch(550, 250)
+
+    -- 3. HIER WIRD DEIN BILD GEZEICHNET
+    -- Es benutzt die Variablen bildX und bildY, die sich in love.update verändern
+    love.graphics.draw(bild, bildX, bildY)
 end
-
-
 
 
 function zeichneMeeresboden()
