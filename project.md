@@ -59,6 +59,8 @@ Die runden Luftblasen zeigen dass es Unterwasser leben gibt.(`love.graphics`).
 - [x] Algen
 - [x] Blasen
 - [x] Meeresboden
+- [x] Spongebob
+- [x] Fliegender spongebob
 
 
 ## 6. Autor:innen

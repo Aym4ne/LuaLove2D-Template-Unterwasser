@@ -1,22 +1,22 @@
--- 1. Variablen für die Bild-Bewegung (Ganz oben definieren!)
+
 local bild
-local bildX = 0  -- Start ganz links
-local bildY = 500  -- Start unten auf dem Sandboden
+local bildX = 0
+local bildY = 100
 
 function love.load()
-    -- Lädt dein Bild (Stelle sicher, dass "mein_bild.png" im selben Ordner liegt!)
+
     bild = love.graphics.newImage("Spongebob-removebg-preview.png")
 end
 
 function love.update(dt)
-    -- 2. Bewegung berechnen (dt sorgt dafür, dass es flüssig läuft)
-    bildX = bildX + 100 * dt  -- Wandert nach rechts
-    bildY = bildY - 70 * dt   -- Wandert nach oben
 
-    -- Optional: Wenn das Bild rechts oben verschwindet, startet es von vorne
+    bildX = bildX + 100 * dt
+    bildY = bildY - 70 * dt
+
+
     if bildX > 800 then
         bildX = 0
-        bildY = 500
+        bildY = 100
     end
 end
 
@@ -25,15 +25,26 @@ function love.draw()
 
     zeichneMeeresboden()
     --Koordinaten des Seegrases
-    zeichneSeegras(100, 420, 200,0,0)
-    zeichneSeegras(250, 420,200,0,0)
-    zeichneSeegras(500, 420,200,200,0)
-    zeichneSeegras(650, 420,200,200,0)
-
+    zeichneSeegras(100, 420, 0,180,0)
+    zeichneSeegras(250, 420,0,180,0)
+    zeichneSeegras(500, 420,0,180,0)
+    zeichneSeegras(650, 420,0,180,0)
+--Luftblasen über Alge 1
     zeichneLuftblasen(100,350,10)
     zeichneLuftblasen(120,370,10)
     zeichneLuftblasen(120,320,15)
-
+--Luftblase über Alge 2
+    zeichneLuftblasen(250,350,10)
+    zeichneLuftblasen(270,370,10)
+    zeichneLuftblasen(270,320,15)
+--Luftblase über Alge 2
+    zeichneLuftblasen(500,350,10)
+    zeichneLuftblasen(520,370,10)
+    zeichneLuftblasen(520,320,15)
+--Luftblase über Alge 2
+    zeichneLuftblasen(650,350,10)
+    zeichneLuftblasen(670,370,10)
+    zeichneLuftblasen(670,320,15)
 
 
 
@@ -43,8 +54,7 @@ function love.draw()
     zeichneFisch(300, 150)
     zeichneFisch(550, 250)
 
-    -- 3. HIER WIRD DEIN BILD GEZEICHNET
-    -- Es benutzt die Variablen bildX und bildY, die sich in love.update verändern
+    --Spongebob Zeichnen
     love.graphics.draw(bild, bildX, bildY)
 end
 
