@@ -1,13 +1,15 @@
-local bild
-local hausBild
+local bild --Spongebob
+local hausBild--Spongebobs Haus
+local pattBild--pattricks Haus
 local bildX = 0
 local bildY = 100
-
+--Um die Fotos zu laden
 function love.load()
     bild = love.graphics.newImage("Spongebob-removebg-preview.png")
     hausBild = love.graphics.newImage("spongyhousy.png")
+    pattBild = love.graphics.newImage("pattrick.png")
 end
-
+--Wie sich mein Spongebob bewegen soll
 function love.update(dt)
     bildX = bildX + 100 * dt
     bildY = bildY - 70 * dt
@@ -50,8 +52,10 @@ function love.draw()
     zeichneFisch(300, 150)
     zeichneFisch(550, 250)
 
-    -- Spongebobs Haus unten rechts zeichnen
+    -- Spongebobs Haus unten mittig zeichnen
     love.graphics.draw(hausBild, 330, 355, 0, 0.15, 0.15)
+    -- Pattricks Haus unten links zeichnen
+    love.graphics.draw(pattBild, 1, 420, 0, 0.2, 0.2)
 
     --Spongebob Zeichnen
     love.graphics.draw(bild, bildX, bildY)
