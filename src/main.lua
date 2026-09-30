@@ -1,18 +1,16 @@
-
 local bild
+local hausBild
 local bildX = 0
 local bildY = 100
 
 function love.load()
-
     bild = love.graphics.newImage("Spongebob-removebg-preview.png")
+    hausBild = love.graphics.newImage("spongyhousy.png")
 end
 
 function love.update(dt)
-
     bildX = bildX + 100 * dt
     bildY = bildY - 70 * dt
-
 
     if bildX > 800 then
         bildX = 0
@@ -29,30 +27,31 @@ function love.draw()
     zeichneSeegras(250, 420,0,180,0)
     zeichneSeegras(500, 420,0,180,0)
     zeichneSeegras(650, 420,0,180,0)
---Luftblasen über Alge 1
+    --Luftblasen über Alge 1
     zeichneLuftblasen(100,350,10)
     zeichneLuftblasen(120,370,10)
     zeichneLuftblasen(120,320,15)
---Luftblase über Alge 2
+    --Luftblase über Alge 2
     zeichneLuftblasen(250,350,10)
     zeichneLuftblasen(270,370,10)
     zeichneLuftblasen(270,320,15)
---Luftblase über Alge 2
+    --Luftblase über Alge 2
     zeichneLuftblasen(500,350,10)
     zeichneLuftblasen(520,370,10)
     zeichneLuftblasen(520,320,15)
---Luftblase über Alge 2
+    --Luftblase über Alge 2
     zeichneLuftblasen(650,350,10)
     zeichneLuftblasen(670,370,10)
     zeichneLuftblasen(670,320,15)
-
-
 
     --Koordinaten der Fische
     zeichneFisch(200, 200)
     zeichneFisch(400, 300)
     zeichneFisch(300, 150)
     zeichneFisch(550, 250)
+
+    -- Spongebobs Haus unten rechts zeichnen
+    love.graphics.draw(hausBild, 330, 355, 0, 0.15, 0.15)
 
     --Spongebob Zeichnen
     love.graphics.draw(bild, bildX, bildY)
@@ -116,5 +115,4 @@ function zeichneLuftblasen(x,y,radius)
     love.graphics.circle("line", x, y, radius)
 
     love.graphics.setColor(1, 1, 1)      -- Farbe zurücksetzen
-
 end
