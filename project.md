@@ -11,9 +11,7 @@
   Kein Roman - wer mehr wissen will, liest den Code.
 -->
 Ein kleines Löve2D-Programm, das eine einfache 2D-Unterwasserszene zeichnet.
-In der Szene ist ein Meeresboden zu sehen sowie das Wasser. Die Bewohner des Meeres
-sind mit der farbe orange einfach zu erkennen. 2 grüne Algen dürfen auch nicht fehlen.
-Die runden Luftblasen zeigen dass es Unterwasser leben gibt.(`love.graphics`).
+4 Algen Meeres boden und das Wasser. Sowie Spongebob und die Häuser seiner Freunde.(`love.graphics`).
 
 ## 2. Tech-Stack
 <!--
@@ -61,6 +59,9 @@ Die runden Luftblasen zeigen dass es Unterwasser leben gibt.(`love.graphics`).
 - [x] Meeresboden
 - [x] Spongebob
 - [x] Fliegender spongebob
+- [x] Spongebobs Haus
+- [x] Pattricks Haus
+
 
 
 ## 6. Autor:innen
